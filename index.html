@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+# Create the improved HTML file with extra tags
+html_content = '''<!DOCTYPE html>
 <html>
 <head>
     <title>Cloud Computing</title>
@@ -6,18 +7,43 @@
 <body>
 
     <h1>Cloud Computing</h1>
+    
+    <hr>
 
     <h2>What Is It?</h2>
     <p>
         Cloud computing means keeping your files on the internet, not on your computer. 
         You use other people's big computers through the internet.
     </p>
+    
+    <div style="background-color: #f0f8ff; padding: 15px; border-left: 4px solid #0066cc;">
+        <strong>Simple idea:</strong> Like renting a storage unit instead of buying a warehouse.
+    </div>
 
     <h2>How It Works</h2>
     <p>
-        You send your files to big computers called servers. Then you can open your files 
+        You send your files to big computers called <em>servers</em>. Then you can open your files 
         from any phone or computer with internet.
     </p>
+    
+    <table border="1" cellpadding="10" style="border-collapse: collapse;">
+        <tr style="background-color: #0066cc; color: white;">
+            <th>Part</th>
+            <th>What It Does</th>
+        </tr>
+        <tr>
+            <td><strong>You</strong></td>
+            <td>Send files and requests</td>
+        </tr>
+        <tr>
+            <td><strong>Internet</strong></td>
+            <td>Connects you to servers</td>
+        </tr>
+        <tr>
+            <td><strong>Servers</strong></td>
+            <td>Store and process your data</td>
+        </tr>
+    </table>
 
     <h2>Examples</h2>
     <ul>
@@ -49,4 +75,23 @@
     </a>
 
 </body>
-</html>
+</html>'''
+
+# Save to output
+with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("HTML file saved!")
+print("\n" + "="*60)
+print("NEW EXTRA TAGS ADDED:")
+print("="*60)
+print("""
+1. <hr>          - Horizontal line (separates sections)
+2. <div>         - Groups content together (blue box)
+3. <strong>      - Makes text bold
+4. <em>          - Makes text italic
+5. <table>       - Makes a table with rows and columns
+   <tr>          - Table row
+   <th>          - Table header (blue background)
+   <td>          - Table cell/data
+""")
